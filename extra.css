@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,200;0,300;0,400;1,300&family=Playfair+Display:wght@400;500;600&family=Raleway:wght@300;400&display=swap');
+
+.font-jost-200 {
+    font-family: jost;
+    font-weight: 200;
+}
+
+.font-jost-300 {
+    font-family: jost;
+    font-weight: 200;
+}
+
+.font-jost-italic {
+    font-family: jost;
+    font-weight: 200;
+}
+
+.font-jost-400 {
+    font-family: jost;
+    font-weight: 400;
+}
+
+.font-raleway-light {
+    font-family: raleway;
+    font-size: 300;
+}
+
+.font-raleway {
+    font-family: raleway;
+    font-weight: 400;
+}
+
