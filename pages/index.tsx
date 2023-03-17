@@ -6,15 +6,12 @@ import { decrement, increment, selectCount, selectValue } from '../store/reducer
 import { RootState } from '../store/store'
 import { useState } from 'react'
 import {btnr, btng} from '../tailwindLayer'
+import Header from '../components/Header'
+import SpinnerButton from '../components/SpinnerButton'
+import Header2 from '../components/Header2'
+import Banner from '../components/Banner'
 
 const Home: NextPage = () => {
-
-  const [isWaving, setIsWaving] = useState(false);
-
-  const handleClick = () => {
-    setIsWaving(true);
-    setTimeout(() => setIsWaving(false), 500);
-  };
 
   // Testing redux dataLayer
 
@@ -22,7 +19,11 @@ const Home: NextPage = () => {
   const dispatch = useDispatch();
 
   return (
-    <div className='space-x-4'>
+    <div className='max-w-9xl px-4 m-auto'>
+      <Header/>
+      <Header2/>
+      <Banner/>
+      
       {/* <h1>Hello World Count = {count}</h1>
         <button onClick={
         () => dispatch(decrement())

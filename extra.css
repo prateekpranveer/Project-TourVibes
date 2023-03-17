@@ -7,7 +7,7 @@
 
 .font-jost-300 {
     font-family: jost;
-    font-weight: 200;
+    font-weight: 300;
 }
 
 .font-jost-italic {
@@ -30,3 +30,19 @@
     font-weight: 400;
 }
 
+.max-w-9xl {
+    max-width: 100rem;
+}
+
+.animate-spin {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
