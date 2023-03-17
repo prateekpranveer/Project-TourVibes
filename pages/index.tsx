@@ -10,6 +10,7 @@ import Header from '../components/Header'
 import SpinnerButton from '../components/SpinnerButton'
 import Header2 from '../components/Header2'
 import Banner from '../components/Banner'
+import TopVibe from '../components/TopVibe'
 
 const Home: NextPage = () => {
 
@@ -23,6 +24,7 @@ const Home: NextPage = () => {
       <Header/>
       <Header2/>
       <Banner/>
+      <TopVibe/>
       
       {/* <h1>Hello World Count = {count}</h1>
         <button onClick={
