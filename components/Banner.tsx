@@ -2,7 +2,7 @@ import React from 'react'
 
 const Banner = () => {
   return (
-    <div className='mt-4 h-20'>
+    <div className='mt-4 h-40'>
         <div>
             <div>
                 <h1 className='font-jost-300 text-2xl'>Why TourVibe?</h1>

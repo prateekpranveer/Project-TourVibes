@@ -31,11 +31,11 @@ const TopVibe = () => {
 
 
 
-                            <div className='other flex flex-wrap w-full mt-10'>
+                            <div className='other grid gap-4 xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 w-full mt-10'>
                                 {
                                     top10.map((p) => (
                                         <div className='ml-auto mr-auto mt-10'>
-                                        <div className='h-30 w-40 min-w-fit'><img src={p.pictorial} alt="" /></div>
+                                        <div className=' min-w-fit'><img src={p.pictorial} alt="" /></div>
                                         <h1 className='font-jost-400 font-bold text-sm text-slate-800 mt-2'>{p.title}</h1>
                                         <p className='font-jost-400 text-gray-700 text-xs'>{p.adress}</p>
                                         </div>

@@ -1,6 +1,23 @@
 import React from 'react'
+import Link from 'next/link'
+import Login from './modals/Login'
+import { useState } from 'react'
+import Signup from './modals/Signup'
+
+export interface LoginModal {
+  state: boolean,
+}
+
+interface SignUpModal {
+  state: boolean,
+}
+
 
 const Header = () => {
+
+  const [LoginModal, setLoginModal] = useState<LoginModal>({state: false})
+  const [SignUpModal, setSignUpModal] = useState(false)
+
   return (
     <div className='h-20 m-auto mt-5 flex justify-between items-center'>
       <div>
@@ -12,14 +29,14 @@ const Header = () => {
         <div className='w-3/5 min-w-fit px-6'>
           <div>
             <ul className='flex justify-between'>
-              <li className='border-b-2 text-sm border-solid border-gray-700'>Explore Places</li>
+              <Link href='/explore-places'><li className='border-b-2 text-sm border-solid border-gray-700'>Explore Places</li></Link>
             </ul>
           </div>
         </div>
 
         <div className='w-40 flex min-w-fit space-x-2 justify-between'>
-          <button className='bg-blue-500 hover:bg-blue-600 text-white px-4 h-8 font-jost-400 text-sm'>Login</button>
-          <button className='bg-indigo-500 hover:bg-indigo-600 text-white px-4 h-8 font-jost-400 rounded-sm text-sm'>Signup</button>
+          <Login setSignUpModal = {setSignUpModal}  loginModal = {LoginModal} setLoginModal = {setLoginModal}/>
+          <Signup setLoginModal = {setLoginModal} SignUpModal = {SignUpModal} setSignUpModal = {setSignUpModal}/>
 
 
         </div>

@@ -5,27 +5,40 @@ import { useSelector, useDispatch } from 'react-redux'
 import { decrement, increment, selectCount, selectValue } from '../store/reducers/counterReducer'
 import { RootState } from '../store/store'
 import { useState } from 'react'
-import {btnr, btng} from '../tailwindLayer'
+import { btnr, btng } from '../tailwindLayer'
 import Header from '../components/Header'
 import SpinnerButton from '../components/SpinnerButton'
 import Header2 from '../components/Header2'
 import Banner from '../components/Banner'
 import TopVibe from '../components/TopVibe'
+import Login from '../components/modals/Login'
+import CreateTour from '../components/CreateTour'
+import JoinTour from '../components/JoinTour'
+import axios from '../axios'
+
 
 const Home: NextPage = () => {
 
   // Testing redux dataLayer
+  
+  const data = async () => {
+    console.log("hi")
+    await axios.get('/users').then(res => console.log((res.data)));
+  
+  }
 
-  const count = useSelector(selectValue)
-  const dispatch = useDispatch();
+  data();
 
   return (
     <div className='max-w-9xl px-4 m-auto'>
-      <Header/>
-      <Header2/>
-      <Banner/>
-      <TopVibe/>
-      
+      <Header />
+      <Header2 />
+      <Banner />
+      <div className='flex space-x-4'>
+        <CreateTour />
+        <JoinTour />
+      </div>
+
       {/* <h1>Hello World Count = {count}</h1>
         <button onClick={
         () => dispatch(decrement())
