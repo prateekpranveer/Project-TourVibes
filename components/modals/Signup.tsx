@@ -1,8 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 
-const Signup = ({SignUpModal, setSignUpModal, setLoginModal}) => {
-  console.log(SignUpModal)
+const Signup = ({SignUpModal, setSignUpModal, setLoginModal}: any) => {
   return (
     <div className='relative'>
 

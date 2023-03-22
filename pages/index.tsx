@@ -19,12 +19,21 @@ import axios from '../axios'
 
 const Home: NextPage = () => {
 
+  const newUser = {
+    name: "Paulo Choleo",
+    emailId: "dp@gmail.com",
+    password: "2380",
+    userName: "diablopendes",
+    userLevel: 2,
+    rating: 4,
+    phone: 8227956933
+  }
+
   // Testing redux dataLayer
   
   const data = async () => {
     console.log("hi")
-    await axios.get('/users').then(res => console.log((res.data)));
-  
+    await axios.post('/user/reg', newUser);
   }
 
   data();
