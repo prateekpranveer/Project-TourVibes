@@ -20,8 +20,8 @@ import axios from '../axios'
 const Home: NextPage = () => {
 
   const newUser = {
-    name: "Paulo Choleo",
-    emailId: "dp@gmail.com",
+    name: "PiKACHU",
+    emailId: "sk@gmail.com",
     password: "2380",
     userName: "diablopendes",
     userLevel: 2,
@@ -32,11 +32,10 @@ const Home: NextPage = () => {
   // Testing redux dataLayer
   
   const data = async () => {
-    console.log("hi")
     await axios.post('/user/reg', newUser);
   }
 
-  data();
+  data()
 
   return (
     <div className='max-w-9xl px-4 m-auto'>

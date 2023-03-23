@@ -19,6 +19,7 @@ const userSchema = new mongoose.Schema ({
     userLevel: {
         type: Number,
         required: true,
+        default: 3
     },
     rating: {
         type: Number,
