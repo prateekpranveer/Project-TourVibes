@@ -15,6 +15,7 @@ import Login from '../components/modals/Login'
 import CreateTour from '../components/CreateTour'
 import JoinTour from '../components/JoinTour'
 import axios from '../axios'
+import ActiveTours from '../components/ActiveTours'
 
 
 const Home: NextPage = () => {
@@ -40,12 +41,8 @@ const Home: NextPage = () => {
   return (
     <div className='max-w-9xl px-4 m-auto'>
       <Header />
-      <Header2 />
       <Banner />
-      <div className='flex space-x-4'>
-        <CreateTour />
-        <JoinTour />
-      </div>
+      <ActiveTours/>
 
       {/* <h1>Hello World Count = {count}</h1>
         <button onClick={

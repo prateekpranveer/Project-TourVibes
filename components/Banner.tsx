@@ -1,14 +1,25 @@
 import React from 'react'
+import CreateTour from './CreateTour'
+
+export type paddingType = {
+  left: number,
+  top: number
+}
 
 const Banner = () => {
   return (
-    <div className='mt-4 h-40'>
-        <div>
+    <div className='mt-6 h-40'>
+        <div className=''>
             <div>
-                <h1 className='font-jost-300 text-2xl'>Why TourVibe?</h1>
+                <h1 className='font-jost-300 text-2xl'>Join Tour</h1>
             </div>
-            <div>
-              <p className='font-jost-300 w-2/3 mt-4 text-md'>TourVibe is an initiative to boost solo tourism. It helps create a tour which is more like a team of solo tourists, who joins at a place and accomplishes the attraction tour together but independently. </p>
+            <div className='flex space-x-4 mt-2'>
+              <div className='h-20 flex justify-start items-center w-full'>
+                <input className='h-14 bg-gray-50 px-4 shadow-md font-jost-400 border rounded-sm w-full' placeholder='Search of Active Tours Attraction-Wise'/>
+              </div>
+              <div className='flex items-center min-w-fit'>
+                <CreateTour/>
+              </div>
             </div>
         </div>
     </div>
