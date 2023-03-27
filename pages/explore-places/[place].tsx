@@ -1,11 +1,13 @@
 import React from 'react'
 import Details from '../../components/Details'
-import Header2 from '../../components/Header2'
+import Header from '../../components/Header'
+import LongSearch from '../../components/LongSearch'
 
 const Singleplace = () => {
   return (
     <div className='max-w-9xl px-4 m-auto'>
-        <Header2/>
+        <Header/>
+        <LongSearch/>
         <Details/>
     </div>
   )
