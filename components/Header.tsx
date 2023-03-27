@@ -4,25 +4,16 @@ import Login from './modals/Login'
 import { useState } from 'react'
 import Signup from './modals/Signup'
 
-export interface LoginModal {
-  state: boolean,
-}
-
-interface SignUpModal {
-  state: boolean,
-}
-
-
 const Header = () => {
 
-  const [LoginModal, setLoginModal] = useState<LoginModal>({state: false})
-  const [SignUpModal, setSignUpModal] = useState(false)
+  const [LoginModal, setLoginModal] = useState<boolean>(false)
+  const [SignUpModal, setSignUpModal] = useState<boolean>(false)
 
   return (
     <div className='h-20 m-auto mt-5 flex justify-between items-center'>
       <div>
-        <div className=' bg-slate-200 m-auto flex justify-center items-center rounded-md'>
-          <span><span className='font-jost-300 bg-red-400 text-xl py-1 px-1 rounded-sm text-white'>Tour</span><span className='font-jost-300 bg-blue-500 py-1 px-1 rounded-sm text-2xl text-white'>Vibe</span></span>
+        <div className='m-auto flex justify-center items-center rounded-md'>
+         <img src="/logo.png" alt="" />
         </div>
       </div>
       <div className='font-jost-400 text-gray-600 flex items-center justify-between'>

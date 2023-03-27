@@ -32,11 +32,11 @@ const Home: NextPage = () => {
 
   // Testing redux dataLayer
   
-  const data = async () => {
-    await axios.post('/user/reg', newUser);
-  }
+  // const data = async () => {
+  //   await axios.post('/user/reg', newUser);
+  // }
 
-  data()
+  // data()
 
   return (
     <div className='max-w-9xl px-4 m-auto'>
