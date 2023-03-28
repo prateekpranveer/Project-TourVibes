@@ -21,3 +21,18 @@
     width: 20px;
     height: 20px;
   }
+
+  .loading-in2 div {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #20305f;
+    border-top-color: transparent;
+    border-radius: 50%;
+  }
+  .loading-in2 div {
+    animation: fast-spin 0.3s linear infinite;
+  }
+  .loading2 {
+    width: 20px;
+    height: 20px;
+  }

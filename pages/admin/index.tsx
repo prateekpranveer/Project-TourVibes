@@ -1,6 +1,5 @@
 import React from 'react'
 import BackHeader from '../../components/admin/BackHeader'
-import Header from '../../components/Header'
 
 const index = () => {
   return (

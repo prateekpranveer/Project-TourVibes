@@ -5,7 +5,7 @@ const Header2 = () => {
     <div className='mt-4 flex justify-between'>
     <div></div>
         <div className='flex justify-between space-x-4'>
-            <div className='border-solid bg-red-50 w-80 h-10 flex justify-center items-center'>
+            <div className='border-solid bg-red-50 shadow-md w-80 h-10 flex justify-center items-center'>
                 <input className='bg-transparent focus:outline-none font-jost-400 w-full mx-4' type="text" placeholder=''/>
             </div>
             <div className='min-w-fit'>
