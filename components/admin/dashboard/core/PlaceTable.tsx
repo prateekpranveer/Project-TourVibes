@@ -17,7 +17,7 @@ const PlaceTable = () => {
         <div className='flex flex-wrap gap-4'>
             {
                 top10.map((p) => (
-                    <div className='font-jost-400 shadow-xl text-gray-700 flex items-center space-x-4 border max-w-fit p-4'>
+                    <div className='font-jost-400 shadow-xl rounded-sm text-gray-700 flex items-center space-x-4 border max-w-fit p-4'>
                         <div className='flex flex-col'>
                             <span>{p.title}</span>
                             <span className='text-xs text-gray-500'>{p.adress}</span>

@@ -6,7 +6,7 @@ const Improve = () => {
     <div className='max-w-9xl m-auto p-4'>
       <div className=''>
           <UserHeader/>
-          hi
+          
       </div>
     </div>
   )
