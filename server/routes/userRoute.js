@@ -82,8 +82,4 @@ router.post('/login', async (req, res) => {
   }
 })
 
-router.get('/docs', (req, res) => {
-  res.send("we are on document");
-})
-
 module.exports = router;
