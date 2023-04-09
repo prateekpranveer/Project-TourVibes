@@ -11,7 +11,6 @@ const explorePlaces = () => {
     <div className='max-w-9xl px-4 m-auto'>
       <Header/>
       <LongSearch/>
-      <VibeSearch/>
       <MustVisit/>
       <MustVisitCities/>
       
