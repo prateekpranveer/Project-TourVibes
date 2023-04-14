@@ -1,13 +1,23 @@
 import React from 'react'
 import Link from 'next/link'
-import Login from './modals/Login'
 import { useState } from 'react'
-import Signup from './modals/Signup'
+import Signup from './modals/SignupModal'
+import { useSelector } from 'react-redux'
+import { RootState } from '../store/store'
+import Modal from './modals/Modal'
+import LogoutModal from './modals/LogoutModal'
+
+interface ModalProps {
+  modalType: string,
+  showing: boolean
+}
 
 const Header = () => {
-
-  const [LoginModal, setLoginModal] = useState<boolean>(false)
-  const [SignUpModal, setSignUpModal] = useState<boolean>(false)
+  const token = useSelector((state:RootState) => state.token.token)
+  const [showModal, setShowModal] = useState<ModalProps>({
+    modalType: 'Login',
+    showing: false
+  })
 
   return (
     <div className='h-20 m-auto mt-5 flex justify-between items-center'>
@@ -25,12 +35,23 @@ const Header = () => {
           </div>
         </div>
 
-        <div className='w-40 flex min-w-fit space-x-2 justify-between'>
-          <Login setSignUpModal = {setSignUpModal}  loginModal = {LoginModal} setLoginModal = {setLoginModal}/>
-          <Signup setLoginModal = {setLoginModal} SignUpModal = {SignUpModal} setSignUpModal = {setSignUpModal}/>
-
-
+        {
+          !token?<>
+          <div className='w-40 flex space-x-2 justify-between items-center'>
+          <button className='text-sm border-b-2 border-gray-500' onClick={() => setShowModal(prevState => ({...prevState, modalType: 'Signup', showing: true}))}>Register</button>
+          <button className='rounded-sm bg-sky-400 text-white px-4 py-2 text-sm' onClick={() => setShowModal(prevState => ({...prevState, modalType: 'Login', showing: true}))}>Login</button>
+          <Modal modalType={showModal.modalType} showModal = {showModal.showing} setShowModal={setShowModal}/>
         </div>
+          </>:
+          <div className='w-40 flex space-x-2 items-center'>
+          <h1 className='text-sm'>Hi, Prateek Kumar</h1>
+          <LogoutModal />
+        </div>
+        }
+
+        
+
+
       </div>
     </div>
   )

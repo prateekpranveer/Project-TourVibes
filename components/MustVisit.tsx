@@ -4,7 +4,7 @@ const MustVisit = () => {
   return (
     <div>
         <div>
-            <div className='mt-8'>
+            <div className='mt-2'>
                 <div className='py-8 font-jost-300'>
                     <h1 className='text-2xl'>Must Visit Attractions</h1>
                 </div>

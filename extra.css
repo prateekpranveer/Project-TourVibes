@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,200;0,300;0,400;1,300&family=Playfair+Display:wght@400;500;600&family=Raleway:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,200;0,300;0,400;1,300&family=Playfair+Display:wght@400;500;600&family=Poppins:wght@200;300;400;500;600;700;800;900&family=Raleway:wght@300;400&display=swap');
 
 .font-jost-200 {
     font-family: jost;
@@ -9,6 +9,37 @@
     font-family: jost;
     font-weight: 300;
 }
+
+.font-rale-300 {
+  font-family: raleway;
+  font-weight: 300;
+}
+
+.font-rale-400 {
+  font-family: raleway;
+  font-weight: 400;
+}
+
+.font-rale-500 {
+  font-family: raleway;
+  font-weight: 500;
+}
+
+.font-rale-600 {
+  font-family: raleway;
+  font-weight: 600;
+}
+
+.font-rale-700 {
+  font-family: raleway;
+  font-weight: 700;
+}
+
+.font-rale-800 {
+  font-family: raleway;
+  font-weight: 800;
+}
+
 
 .font-jost-italic {
     font-family: jost;

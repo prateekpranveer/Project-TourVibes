@@ -8,7 +8,6 @@ const ImproveEntry = () => {
   return (
     <div>
         <div className='max-w-9xl m-auto p-4'>
-            <UserHeader/>
             <div className='mt-8'>
                 <Header2/>
             </div>

@@ -3,7 +3,6 @@ import Banner from '../components/Banner'
 import CreateTour from '../components/CreateTour'
 import CreateTourForm from '../components/CreateTourForm'
 import Header from '../components/Header'
-import Header2 from '../components/Header2'
 
 const createTour = () => {
   return (
