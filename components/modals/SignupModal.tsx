@@ -1,15 +1,18 @@
 import React from 'react'
 import Link from 'next/link'
 import { X } from 'react-feather'
+import { useRouter } from 'next/router'
 import Spinner from '../enhancement/Spinner';
 
 interface SignUpModalProps {
   setShowModal: React.Dispatch<React.SetStateAction<{showing: boolean, modalType: string}>>
 }
 
-const isLogging = true;
+const isLogging = false;
 
 const SignupModal = ({setShowModal}: SignUpModalProps) => {
+
+  const router = useRouter();
 
   const handleSignUp = () => {
 
