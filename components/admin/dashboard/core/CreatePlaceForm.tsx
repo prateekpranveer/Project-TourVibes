@@ -1,11 +1,10 @@
-import React, { ChangeEvent, useEffect, useRef } from 'react'
+import React, { ChangeEvent, useEffect } from 'react'
 import Spinner from '../../../enhancement/Spinner'
 import { useState } from 'react'
 import { Plus, X } from 'react-feather'
 import dynamic from 'next/dynamic';
 const ReactQuill = dynamic(() => import('react-quill'), { ssr: false });
 import 'react-quill/dist/quill.snow.css';
-import { EditorState } from 'react-draft-wysiwyg'
 import axios from '../../../../axios';
 import { useRouter } from 'next/router';
 

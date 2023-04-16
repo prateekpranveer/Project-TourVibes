@@ -1,6 +1,4 @@
 import React from 'react'
-import { Plus, Edit2 } from 'react-feather'
-import Link from 'next/link'
 
 const User = 'Prateek'
 
