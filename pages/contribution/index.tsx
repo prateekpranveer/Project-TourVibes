@@ -1,6 +1,4 @@
 import React from 'react'
-import Login from '../../components/modals/Login'
-import LoginModal from '../../components/modals/LoginModal'
 import { useSelector } from 'react-redux'
 import { RootState } from '../../store/store'
 import { useRouter } from 'next/router'

@@ -1,7 +1,5 @@
 import type { NextPage } from 'next'
 import Header from '../components/Header'
-import Banner from '../components/Banner'
-import ActiveTours from '../components/ActiveTours'
 
 
 const Home: NextPage = () => {
@@ -27,8 +25,6 @@ const Home: NextPage = () => {
   return (
     <div className='max-w-9xl px-4 m-auto'>
       <Header />
-      <Banner />
-      <ActiveTours/>
 
       {/* <h1>Hello World Count = {count}</h1>
         <button onClick={

@@ -1,11 +1,9 @@
 import React from 'react'
 import Link from 'next/link'
 import { useState } from 'react'
-import Signup from './modals/SignupModal'
 import { useSelector } from 'react-redux'
 import { RootState } from '../store/store'
 import Modal from './modals/Modal'
-import LogoutModal from './modals/LogoutModal'
 
 interface ModalProps {
   modalType: string,
@@ -45,7 +43,6 @@ const Header = () => {
           </>:
           <div className='w-40 flex space-x-2 items-center'>
           <h1 className='text-sm'>Hi, Prateek Kumar</h1>
-          <LogoutModal />
         </div>
         }
 

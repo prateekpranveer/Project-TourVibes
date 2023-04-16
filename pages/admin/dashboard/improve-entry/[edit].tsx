@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import UserHeader from '../../../../components/admin/dashboard/core/UserHeader'
-import CreatePlaceForm from '../../../../components/admin/dashboard/core/CreatePlaceForm'
 import axios from '../../../../axios'
 import { useRouter } from 'next/router'
 
@@ -23,7 +22,6 @@ const Improve = () => {
     <div className='max-w-9xl m-auto p-4'>
       <div className=''>
         <UserHeader />
-        <CreatePlaceForm placeDetailsforImprovement = {placeDetailState} />
       </div>
     </div>
   )
