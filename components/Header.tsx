@@ -18,26 +18,20 @@ const Header = () => {
   })
 
   return (
-    <div className='h-20 m-auto mt-5 flex justify-between items-center'>
+    <div className='h-20 m-auto mt-2 flex justify-between items-center'>
       <div>
         <div className='m-auto flex justify-center items-center rounded-md'>
          <img src="/logo.png" alt="" />
+         <div className='ml-3 font-jost-400 rounded-full text-xl text-slate-600 p-2'><h1>TourTribes</h1></div>
         </div>
       </div>
-      <div className='font-jost-400 text-gray-600 flex items-center justify-between'>
-        <div className='w-3/5 min-w-fit px-6'>
-          <div>
-            <ul className='flex justify-between'>
-              <Link href='/explore-places'><li className='border-b-2 text-sm border-solid border-gray-700'>Explore Places</li></Link>
-            </ul>
-          </div>
-        </div>
+      <div className='font-jost-400 text-gray-600 flex items-center'>
 
         {
           !token?<>
-          <div className='w-40 flex space-x-2 justify-between items-center'>
+          <div className='w-32 flex justify-between items-center'>
           <button className='text-sm border-b-2 border-gray-500' onClick={() => setShowModal(prevState => ({...prevState, modalType: 'Signup', showing: true}))}>Register</button>
-          <button className='rounded-sm bg-sky-400 text-white px-4 py-2 text-sm' onClick={() => setShowModal(prevState => ({...prevState, modalType: 'Login', showing: true}))}>Login</button>
+          <button className='rounded-full bg-blue-400 text-white px-4 py-2 text-sm' onClick={() => setShowModal(prevState => ({...prevState, modalType: 'Login', showing: true}))}>Login</button>
           <Modal modalType={showModal.modalType} showModal = {showModal.showing} setShowModal={setShowModal}/>
         </div>
           </>:
