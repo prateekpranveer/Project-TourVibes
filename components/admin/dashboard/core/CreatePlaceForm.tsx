@@ -125,7 +125,7 @@ const CreatePlaceForm = () => {
           setentryState({ ...entryState, name: e.target.value });
           console.log(entryState);
         }} className='w-full focus:outline-none bg-trasparent' type="text" placeholder={entryState.name} /></div>
-        <div className='w-full border text-xs border-gray-300 h-4 mt-3 rounded-sm flex items-center py-4 px-3'><input onChange={(e) => setentryState({ ...entryState, address: e.target.value })} className='w-full focus:outline-none bg-trasparent' type="text" placeholder={entryState.adress} /></div>
+        <div className='w-full border text-xs border-gray-300 h-4 mt-3 rounded-sm flex items-center py-4 px-3'><input onChange={(e) => setentryState({ ...entryState, address: e.target.value })} className='w-full focus:outline-none bg-trasparent' type="text" placeholder={entryState.address} /></div>
         <div className='w-full border text-xs border-gray-300 h-4 mt-3 rounded-sm flex items-center py-4 px-3'><input onChange={(e) => setentryState({ ...entryState, slug: e.target.value })} className='w-full focus:outline-none bg-trasparent' type="text" placeholder={entryState.slug} /></div>
 
         <select id="countries" onChange={handleCategory} className="bg-gray-100 focus:outline-none mt-4 border border-gray-200 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2">
