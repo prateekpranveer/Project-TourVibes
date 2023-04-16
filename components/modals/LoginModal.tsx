@@ -51,6 +51,7 @@ const LoginModal = ({ setShowModal }: LoginModalProps) => {
 
     }).catch(err => {
       setisLogging(false)
+      console.log(err.response.data)
       dispatch({
         type: LOGIN_ERROR,
         payload: err.response.data

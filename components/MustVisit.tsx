@@ -10,61 +10,44 @@ const MustVisit = () => {
                 </div>
 
                 <div className='flex flex-wrap gap-10'>
+
+                        <div className='w-72 flex hover:shadow-sm hover:cursor-pointer p-4 items-center'>
+                            <div className='left bg-green-200 flex items-center p-4 rounded-full'>
+                                <h1>36</h1>
+                            </div>
+                            <div className='right flex flex-col ml-4 justify-center'>
+                                <div className='top font-jost-400 text-gray-700 text-xl'>Taj Mahal</div>
+                                <div className='bottom text-sm font-jost-300'>Agra, New Delhi</div>
+                            </div>
+                        </div>
+                        <div className='w-72 h-16 flex hover:shadow-md  p-2'>
+                            <div className='left bg-green-200 flex items-center p-6 rounded-full'>
+                                <h1>11</h1>
+                            </div>
+                            <div className='right flex flex-col ml-4 justify-center'>
+                                <div className='top font-jost-400 text-gray-700 text-xl'>Batasia Loop</div>
+                                <div className='bottom text-sm font-jost-300'>Darjelling, West Bengal</div>
+                            </div>
+                        </div>
+                        <div className='w-72 h-16 flex hover:shadow-md  p-2'>
+                            <div className='left bg-green-200 flex items-center p-6 rounded-full'>
+                                <h1>2</h1>
+                            </div>
+                            <div className='right flex flex-col ml-4 justify-center'>
+                                <div className='top font-jost-400 text-gray-700 text-xl'>Howrah Station</div>
+                                <div className='bottom text-sm font-jost-300'>Howrah, West Bengal</div>
+                            </div>
+                        </div>
+                        <div className='w-72 h-16 flex hover:shadow-md  p-2'>
+                            <div className='left bg-green-200 flex items-center p-6 rounded-full'>
+                                <h1>12</h1>
+                            </div>
+                            <div className='right flex flex-col ml-4 justify-center'>
+                                <div className='top font-jost-400 text-gray-700 text-xl'>Pink City</div>
+                                <div className='bottom text-sm font-jost-300'>Jaipur, Rajasthan</div>
+                            </div>
+                        </div>
                     
-                <div className='relative flex-grow xl:w-1/6 lg:w-1/6 md:w-1/4 sm:w-1/3'>
-                    <div className='w-70 h-40 overflow-hidden'>
-                        <img className='w-full h-full object-cover rounded-md' src='/111.jpg' alt="" />
-                    </div>
-                    <div className='py-4 px-1'>
-                        <h1 className='font-jost-300 text-xl'>The Amer Fort</h1>
-                        <p className='text-sm font-jost-400 text-gray-500'>Jaipur, Rajasthan</p>
-                    </div>
-                    <div className='bg-pink-100 w-12 h-12 -top-4 -right-4 rounded-full absolute flex justify-center items-center text-gray-800 font-jost-400'>34</div>
-                </div>
-
-                <div className='relative flex-grow xl:w-1/6 lg:w-1/6 md:w-1/4 sm:w-1/3'>
-                    <div className='w-70 h-40 overflow-hidden'>
-                        <img className='w-full h-full object-cover rounded-md' src='/222.jpg' alt="" />
-                    </div>
-                    <div className='py-4 px-1'>
-                        <h1 className='font-jost-300 text-xl'>The Taj Mahal</h1>
-                        <p className='text-sm font-jost-400 text-gray-500'>Agra, UP</p>
-                    </div>
-                    <div className='bg-pink-100 w-12 h-12 -top-4 -right-4 rounded-full absolute flex justify-center items-center text-gray-800 font-jost-400'>12</div>
-                </div>
-
-                <div className='relative flex-grow xl:w-1/6 lg:w-1/6 md:w-1/4 sm:w-1/3'>
-                    <div className='w-70 h-40 overflow-hidden'>
-                        <img className='w-full h-full object-cover rounded-md' src='/112.jpg' alt="" />
-                    </div>
-                    <div className='py-4 px-1'>
-                        <h1 className='font-jost-300 text-xl'>Kedarnath</h1>
-                        <p className='text-sm font-jost-400 text-gray-500'>Kedarnath, UP</p>
-                    </div>
-                    <div className='bg-pink-100 w-12 h-12 -top-4 -right-4 rounded-full absolute flex justify-center items-center text-gray-800 font-jost-400'>4</div>
-                </div>
-
-                <div className=' relative flex-grow xl:w-1/6 lg:w-1/6 md:w-1/4 sm:w-1/3'>
-                    <div className='w-70 h-40 overflow-hidden'>
-                        <img className='w-full h-full object-cover rounded-md' src='/113.jpg' alt="" />
-                    </div>
-                    <div className='py-4 px-1'>
-                        <h1 className='font-jost-300 text-xl'>Vilas Palace</h1>
-                        <p className='text-sm font-jost-400 text-gray-500'>Jaipur, Rajasthan</p>
-                    </div>
-                    <div className='bg-pink-100 w-12 h-12 -top-4 -right-4 rounded-full absolute flex justify-center items-center text-gray-800 font-jost-400'>11</div>
-                </div>
-
-                <div className='relative flex-grow xl:w-1/6 lg:w-1/6 md:w-1/4 sm:w-1/3'>
-                    <div className='w-70 h-40 overflow-hidden'>
-                        <img className='w-full h-full object-cover rounded-md' src='/114.jpg' alt="" />
-                    </div>
-                    <div className='py-4 px-1'>
-                        <h1 className='font-jost-300 text-xl'>The Amer Fort</h1>
-                        <p className='text-sm font-jost-400 text-gray-500'>Jaipur, Rajasthan</p>
-                    </div>
-                    <div className='bg-pink-100 w-12 h-12 -top-4 -right-4 rounded-full absolute flex justify-center items-center text-gray-800 font-jost-400'>126</div>
-                </div>
 
                 </div>
 
