@@ -4,7 +4,7 @@ import { Plus } from 'react-feather'
 const Banner = () => {
   return (
     <div>
-        <div className='bg-gray-100 rounded-sm px-12 py-24'>
+        <div className='bg-yellow-100 rounded-sm px-12 py-24'>
             <div className='font-rale-300'>
                 <h1 className=' text-5xl max-w-3xl leading-snug text-gray-800'>Explore India with Like Minded Travellers</h1>
                 <div className='flex space-x-4 mt-8'>

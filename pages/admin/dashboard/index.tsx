@@ -1,20 +1,48 @@
 import React from 'react'
-import CreatePlaceForm from '../../../components/admin/dashboard/core/CreatePlaceForm'
-import UserHeader from '../../../components/admin/dashboard/core/UserHeader'
-import Link from 'next/link'
-import { Plus, Edit2 } from 'react-feather'
 import PlaceTable from '../../../components/admin/dashboard/core/PlaceTable'
+import { useRouter } from 'next/router'
+import axios from '../../../axios'
 
 const index = () => {
+
+  const addCategoryRoute = '/admin/dashboard/create-category'
+  const addPlaceRoute = '/admin/dashboard/create-entry'
+
+  const [place, setPlace] = React.useState<any>([])
+  const [category, setCategory] = React.useState<any>([])
+
+  const router = useRouter()
+
+  const handlePlaceClick = async (id: string) => {
+    router.push(`/admin/dashboard/improve-entry/${id}`)
+  }
+
+  const allPlaces = async () => {
+    const data = await axios.get('/place/all')
+    setPlace(data.data)
+  }
+
+  React.useEffect(() => {
+    allPlaces();
+  }, [])
+
+  const handleCategoryClick = async (id: string) => {
+    router.push(`/admin/dashboard/improve-entry/${id}`)
+  }
+
+  const allCategory = async () => {
+    const data = await axios.get('/category/all')
+    setCategory(data.data)
+  }
+
+  React.useEffect(() => {
+    allCategory();
+  }, [])
+
   return (
     <div className='max-w-9xl m-auto p-4'>
-        <div className=''>
-          <div className='flex space-x-3 mt-4'>
-            <Link href='/admin/dashboard/create-entry'><button className='bg-green-400 flex space-x-2 font-jost-300 hover:bg-green-600 text-white text-sm rounded-sm px-2 py-2 shadow-lg'><Plus size={20}/></button></Link>
-            <Link href='/admin/dashboard/improve-entry'><button className='bg-red-400 flex space-x-2 font-jost-300 hover:bg-red-600 text-white text-sm rounded-sm px-2 py-2 shadow-lg'><Edit2 size={20}/></button></Link>
-            <PlaceTable/>
-            </div>
-        </div>
+      <div className='mt-4'><PlaceTable tableName={'Places'} route={addPlaceRoute} data={place} handleClick={handlePlaceClick} /></div>
+      <div className='mt-4'><PlaceTable tableName={'Categories'} route={addCategoryRoute} data={category} handleClick={handleCategoryClick} /></div>
     </div>
   )
 }

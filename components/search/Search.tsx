@@ -34,7 +34,6 @@ const SearchBox = () => {
     }, [searchText])
 
     const handleResultClick = (p: PlacesProps) => {
-
         router.push(`/${p.category}/${p.slug}`)
     }
 
@@ -45,7 +44,7 @@ const SearchBox = () => {
                 <div className='mr-2'><Search size={20} color='gray' /></div>
             </div>
 
-            <div className={`results absolute w-full ${!searchText && 'hidden'} bg-white p-4 border top-16 right-0`}>
+            <div className={`results absolute rounded-20 w-full ${!searchText && 'hidden'} bg-white p-4 border top-16 right-0`}>
                 {
                     places?.map((p, id) => (
                         <div onClick={() => handleResultClick(p)} key={id} className={`flex justify-between rounded-sm p-2 text-gray-700 border-b-1`}>

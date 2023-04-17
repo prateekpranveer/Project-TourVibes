@@ -23,6 +23,19 @@ const MaxPlace = ({singlePlaceData}:any) => {
                 <div className='mt-12 text-sm max-w-5xl font-jost-400 text-gray-700'>
                     <div><DangerousHTML htmlContent={singlePlaceData.desc}/></div>
                 </div>
+                <div className='mt-10 text-xl font-jost-400 text-gray-700'>
+                    <h1 className='border-b-2 max-w-fit border-gray-500'>Checkpoints</h1>
+                </div>
+                <div className='mt-4 font-jost-400 text-sm max-w-5xl'>
+                    {singlePlaceData.checkPoints?.map((p: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined,id: React.Key | null | undefined) =>(
+                    <>
+                    <div>
+                        <div key={id}>{p}</div>
+                        <div className='mt-4'></div>
+                    </div>
+                    </>
+                ))}
+                </div>
             </div>
 
 
