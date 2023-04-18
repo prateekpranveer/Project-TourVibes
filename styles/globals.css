@@ -8,9 +8,9 @@
     100% { transform: translate(-50%,-50%) rotate(360deg); }
   }
   .loading-in div {
-    width: 20px;
-    height: 20px;
-    border: 2px solid #dce5ff;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #4d62a0;
     border-top-color: transparent;
     border-radius: 50%;
   }
@@ -18,8 +18,8 @@
     animation: fast-spin 0.8s linear infinite;
   }
   .loading {
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
   }
 
   .loading-in2 div {
