@@ -3,7 +3,6 @@ import Header from '../components/Header'
 import Banner from '../components/banner/Banner'
 import Search from '../components/search/Search'
 import SearchByCategory from '../components/search/SearchByCategory'
-import MustVisit from '../components/MustVisit'
 import WriteBanner from '../components/blog/WriteBanner'
 import Footer from '../components/footer/Footer'
 
@@ -22,10 +21,6 @@ const Home: NextPage = () => {
       <div className='mt-20'>
         <Banner />
       </div>
-      <div>
-        <MustVisit />
-      </div>
-
       <div className='mt-10'>
         <WriteBanner />
       </div>

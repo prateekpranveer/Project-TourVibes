@@ -5,12 +5,14 @@ import { RootState } from '../store'
 
 interface tokenState {
     token: String,
+    emailIDFound: any
     isLoading: Boolean,
     error: String,
 }
 
 const initialState : tokenState = {
     token: "",
+    emailIDFound: {},
     isLoading: false,
     error: ""
 }
@@ -26,10 +28,11 @@ export const tokenSlice = createSlice({
                 error: ""
             }
         },
-        LOGIN_SUCCESS: (state, action: PayloadAction<String>) => {
+        LOGIN_SUCCESS: (state, action: PayloadAction<tokenState>) => {
             return {
                 ...state,
-                token: action.payload,
+                token: action.payload.token,
+                emailIDFound: action.payload.emailIDFound,
                 isLoading: false,
                 error: ""
             }
@@ -41,10 +44,19 @@ export const tokenSlice = createSlice({
                 isLoading: false,
                 error: action.payload
             }
+        },
+        LOGOUT: (state) => {
+            return {
+                ...state, 
+                token:"",
+                emailIDFound:{},
+                isLoading: false,
+                error:"",
+            }
         }
     },
 })
 
-export const {LOGIN_REQUEST, LOGIN_SUCCESS, LOGIN_ERROR} = tokenSlice.actions
+export const {LOGIN_REQUEST, LOGIN_SUCCESS, LOGIN_ERROR, LOGOUT} = tokenSlice.actions
 export const tokenState  = (state: RootState) => state.token.token;
 export default tokenSlice.reducer

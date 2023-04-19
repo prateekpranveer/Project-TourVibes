@@ -28,7 +28,7 @@ const Modal = ({modalType, showModal, setShowModal }: ModalProps) => {
             }
             {
                 modalType==='Signup' && <SignupModal setShowModal={setShowModal}/>
-            }
+            } 
         </div>
         
 

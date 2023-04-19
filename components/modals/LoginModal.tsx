@@ -29,6 +29,7 @@ const LoginModal = ({ setShowModal }: LoginModalProps) => {
   const dispatch = useDispatch();
   const router = useRouter();
   const tokenState = useSelector((state: RootState) => state.token)
+  console.log(tokenState)
 
   // Actual Login Functionalty from the Backend Server
   const handleLogin = async () => {
@@ -41,14 +42,13 @@ const LoginModal = ({ setShowModal }: LoginModalProps) => {
       password: loginData.password
     }).then(res => {
       if (res.data.token) {
-        window.localStorage.setItem('Token', res.data.token);
+        window.localStorage.setItem('my-app-token', res.data.token);
         dispatch({
           type: LOGIN_SUCCESS,
-          payload: res.data.token
+          payload: res.data
         })
-        console.log(res)
+        setShowModal(prevState => ({...prevState, showing: false}))
       }
-
     }).catch(err => {
       setisLogging(false)
       console.log(err.response.data)
@@ -61,12 +61,10 @@ const LoginModal = ({ setShowModal }: LoginModalProps) => {
 
   const handleLoginEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setLoginData((prevState) => ({ ...prevState, email: e.target.value }))
-    console.log(loginData)
   }
 
   const handleLoginPasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setLoginData((prevState) => ({ ...prevState, password: e.target.value }))
-    console.log(loginData)
   }
 
   return (
