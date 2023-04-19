@@ -29,7 +29,6 @@ const LoginModal = ({ setShowModal }: LoginModalProps) => {
   const dispatch = useDispatch();
   const router = useRouter();
   const tokenState = useSelector((state: RootState) => state.token)
-  console.log(tokenState)
 
   // Actual Login Functionalty from the Backend Server
   const handleLogin = async () => {
@@ -80,7 +79,7 @@ const LoginModal = ({ setShowModal }: LoginModalProps) => {
         </div>
       </div>
       <div>
-        <button onClick={handleLogin} className='bg-blue-400 flex justify-center items-center hover:bg-blue-500 font-jost-300 text-sm mt-4 py-2 px-4 text-white rounded-full'>{isLogging ? <div className='flex items-center gap-4'><Spinner /><h1>Loading</h1></div> : <>Login</>}</button>
+        <button onClick={handleLogin} className='bg-blue-400 flex justify-center items-center hover:bg-blue-500 font-jost-300 text-sm mt-4 py-2 px-4 text-white rounded-full'>{isLogging ? <div className='flex items-center gap-4'><Spinner  size={'sm'} /><h1>Loading</h1></div> : <>Login</>}</button>
       </div>
 
       <div className='mt-2 text-sm text-red-500'>{tokenState.error?<h1>{tokenState.error}</h1>:<></>}</div>

@@ -3,12 +3,6 @@ import { useRouter } from 'next/router';
 import axios from '../../axios';
 import Spinner from '../enhancement/Spinner';
 
-const skeleton = () => {
-    <div className='w-full h-4'></div>
-}
-
-
-
 const SearchByCategory = () => {
     const [categoryIsLoading, setcategoryIsLoading] = React.useState(false)
     const [allCategory, setallCategory] = React.useState<any>([])
@@ -29,7 +23,7 @@ const SearchByCategory = () => {
         router.push(`/${p}`)
     }
 
-    if (categoryIsLoading) return (<div className='flex justify-center mt-8'><Spinner/></div>)
+    if (categoryIsLoading) return (<div className='flex justify-center mt-8'><Spinner size={'lg'}/></div>)
     else 
     return (
         <div>

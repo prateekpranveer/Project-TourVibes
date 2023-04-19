@@ -43,7 +43,7 @@ const Category = () => {
 
 
     if (isLoading ) {
-        return (<div className='flex justify-center mt-20'><Spinner/></div>)
+        return (<div className='flex justify-center mt-20'><Spinner size={''}/></div>)
     }
         return (
             <div>
