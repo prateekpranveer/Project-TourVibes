@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Spinner = ({size}) => {
+const Spinner = ({size}:any) => {
     let mainClass = '';
     let childrenOne = '';
     if (size=='sm') {
