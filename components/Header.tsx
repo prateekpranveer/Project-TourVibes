@@ -40,7 +40,7 @@ const Header = () => {
           </>:
           <div className='w-40 flex space-x-4 relative items-center'>
           <h1 className='text-sm'>Hi, {emailIDFound.name}</h1>
-          <Settings onClick={() => setlogoutModal(!logoutModal)} size={20}/>
+          <Settings className='cursor-pointer' onClick={() => setlogoutModal(!logoutModal)} size={20}/>
           {logoutModal&&<LogoutModal/>}
         </div>
         }

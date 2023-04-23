@@ -2,6 +2,7 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import { RootState } from '../../store/store'
 import { useRouter } from 'next/router'
+import Header from '../../components/Header'
 
 const Contribution = () => {
     const router = useRouter();
@@ -13,7 +14,9 @@ const Contribution = () => {
         }
     }
     return (
-        <div className='max-w-9xl m-auto mt-10 p-4'>
+
+        <div className='max-w-9xl m-auto p-4'>
+            <Header/>
             <div className=''>
                 <div className='font-rale-800 text-gray-600 text-2xl tracking-wider max-w-fit'><h1>Welcome to TourVibes</h1></div>
                 <div className='font-jost-400 mt-6 tracking-normal text-xl max-w-6xl'>

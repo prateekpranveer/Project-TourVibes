@@ -36,3 +36,7 @@
     width: 20px;
     height: 20px;
   }
+
+  .text-xxs {
+    font-size: 10px;
+  }

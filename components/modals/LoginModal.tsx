@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Spinner from '../enhancement/Spinner';
 import { useRouter } from 'next/router';
 import { useSelector, useDispatch } from 'react-redux';
@@ -29,7 +29,6 @@ const LoginModal = ({ setShowModal }: LoginModalProps) => {
   const dispatch = useDispatch();
   const router = useRouter();
   const tokenState = useSelector((state: RootState) => state.token)
-
   // Actual Login Functionalty from the Backend Server
   const handleLogin = async () => {
     setisLogging(true);
@@ -41,6 +40,7 @@ const LoginModal = ({ setShowModal }: LoginModalProps) => {
       password: loginData.password
     }).then(res => {
       if (res.data.token) {
+        console.log(res.data)
         window.localStorage.setItem('my-app-token', res.data.token);
         dispatch({
           type: LOGIN_SUCCESS,

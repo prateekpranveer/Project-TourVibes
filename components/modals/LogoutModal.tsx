@@ -13,14 +13,15 @@ const dispatch = useDispatch()
         })
     }
   return (
-    <div className='absolute top-6 w-32 rounded-lg z-40 right-8 shadow-lg bg-gray-100'>
-        <div className='px-4 py-4'>
-            <div className='menu py-4'>
-                <div className='menu'>
+    <div className='absolute top-6 w-36 rounded-lg z-40 right-8 shadow-lg bg-gray-100'>
+        <div className='px-4 py-2'>
+            <div className='menu py-2'>
+                <div className='menu py-2'>
                     <ul className='flex flex-col space-y-2'>
                         <Link href='/profile'><li className='flex space-x-2 items-center'><Circle size={15}/><span className='text-sm'>Profile</span></li></Link>
                         <Link href='/active-tours'><li className='flex space-x-2 items-center'><Activity size={15}/><span className='text-sm'>Your Tours</span></li></Link>
                         <Link href='/admin/dashboard'><li className='flex space-x-2 items-center'><Tool size={15}/><span className='text-sm'>Dashboard</span></li></Link>
+                        <Link href='/contribution'><li className='flex space-x-2 items-center'><Tool size={15}/><span className='text-sm'>Contribute</span></li></Link>
                     </ul>
                 </div>
             </div>
