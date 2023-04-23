@@ -82,9 +82,9 @@ const listing = () => {
     {
         con?.map((p,id) => (
             <div className='flex items-center justify-between'>
-                <div className='text-sm flex space-x-3 font-jost-300'>
+                <div className='text-sm flex flex-wrap space-x-2 font-jost-300'>
             <div>{p.desc}</div>
-            <div className=''>{p.author?<div className='flex items-center space-x-2'><h1 className='bg-purple-500 pr-2 text-white py-0 text-xxs rounded-sm'><span className='px-2 py-1 rounded-full'>Picked by</span>{p.authorName}</h1></div>
+            <div className=''>{p.author?<div className='flex items-center space-x-2'><h1 className='bg-purple-500 pr-2 text-white py-0 text-xxs rounded-full'><span className='px-2 py-1 rounded-full'>Picked by</span>{p.authorName}</h1></div>
             :
             <></>
             }</div>
