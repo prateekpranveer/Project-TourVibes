@@ -17,6 +17,7 @@ interface ContributionProps {
     picked: boolean,
     Published: boolean,
     author: string,
+    authorName: string
 }
 
 const listing = () => {
@@ -28,12 +29,13 @@ const listing = () => {
     console.log(emailIDFound._id)
 
     const findAllCon = () => {
-        const allCon = axios.get('/contribution/all').then((res) => setcon(res.data))
+        const allCon = axios.get('/contribution/all').then(res => setcon(res.data))
+        console.log(con)
     }
 
     useEffect(() => {
         findAllCon()
-    }, [router.query])
+    }, [router.query, isGetting])
 
 
     const handleButtonClick = async (p:ContributionProps) => {
@@ -62,6 +64,11 @@ const listing = () => {
 
 
   return (
+    <div>
+        {
+            isGetting&&<div className='w-full h-full bg-slate-200 opacity-80 fixed'><div className='fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 transition-opacity'><Spinner size='lg'/></div></div>
+        }
+    
     <div className='max-w-9xl p-4 m-auto'>
         <Header/>
         {/* <button className='bg-red-800 text-white px-4 py-2 rounded-full mb-4' onClick={handleDeleteAll}>Delete All</button>
@@ -74,10 +81,10 @@ const listing = () => {
     <>
     {
         con?.map((p,id) => (
-            <div className='flex justify-between'>
-                <div className='flex space-x-4 text-sm'>
+            <div className='flex items-center justify-between'>
+                <div className='text-sm flex space-x-3 font-jost-300'>
             <div>{p.desc}</div>
-            <div className=''>{p.author?<div className='flex items-center space-x-2'><h1 className='bg-green-800 pr-2 text-white py-0 text-xxs rounded-full'><span className='px-2 py-1 rounded-full'>Picked by</span>{p.author}</h1></div>
+            <div className=''>{p.author?<div className='flex items-center space-x-2'><h1 className='bg-purple-500 pr-2 text-white py-0 text-xxs rounded-sm'><span className='px-2 py-1 rounded-full'>Picked by</span>{p.authorName}</h1></div>
             :
             <></>
             }</div>
@@ -98,6 +105,7 @@ const listing = () => {
         ))
     }
     </>
+    </div>
     </div>
     </div>
   )

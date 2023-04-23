@@ -1,6 +1,7 @@
 import React from 'react';
 import LoginModal from './LoginModal';
 import SignupModal from './SignupModal';
+import AlertModal from './AlertModal';
 
 interface ModalProps {
   showModal: boolean;
@@ -29,6 +30,7 @@ const Modal = ({modalType, showModal, setShowModal }: ModalProps) => {
             {
                 modalType==='Signup' && <SignupModal setShowModal={setShowModal}/>
             } 
+
         </div>
         
 
