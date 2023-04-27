@@ -23,7 +23,7 @@ const DeveloperPortfolio = () => {
                 <div className='w-4/5'>
                 <div className=''><span className='text-2xl font-jost-300'>Full Stack Developer</span></div>
                 <div className='mt-4'><span className='font-jost-400 mt-10'>Next.js || React.js || Redux.js || TailwindCSS || Styled Components || Express.js </span></div>
-                    <div className='mt-4 font-jost-400 text-gray-600'><p>Hey Folks, I am a full-stack developer, author at GFG, and tech enthusiast. With expertise in both front-end and back-end technologies, I specialize in creating scalable web applications that deliver exceptional user experiences. My passion for technology and commitment to excellence drive me to constantly improve and stay up-to-date with the latest industry trends.</p></div>
+                    <div className='mt-4 font-jost-400 text-gray-600'><p>Hey Folks, I am <span className='text-xl'>Prateek Kumar</span>, I am a full-stack developer, author at GFG, and tech enthusiast. With expertise in both front-end and back-end technologies, I specialize in creating scalable web applications that deliver exceptional user experiences. My passion for technology and commitment to excellence drive me to constantly improve and stay up-to-date with the latest industry trends.</p></div>
                     <div onClick={handleDownload} className='mt-4'><button className='px-4 py-2 border border-gray-700 hover:text-white hover:bg-black rounded-full font-jost-400'>Download Resume</button></div>
                 </div>
             </div>
