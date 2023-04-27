@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 
 const PlaceTable = ({tableName, route, data, handleClick}:any) => {
-    if (!data) return (<Spinner/>)
+    if (!data) return (<Spinner size='sm'/>)
     else {
 
         return (
